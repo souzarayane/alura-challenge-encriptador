@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --white: #FFFFFF;
+    --light-blue: #676fgd;
+    --medium-blue: #424769;
+    --dark-blue: #2D3250;
+    --gold: #deb310;
+    --green: #0ECA22;
+    --darkslategrey: #2f4f4f;
+}
+
+/************************************************CONTAINER*********************************************/
+#container {
+    background-color: var(--medium-blue);
+    width: 700px;
+    height: 400px;
+    margin: 0 auto;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+/************************************************BODY***************************************************/
+body {
+    background-color: var(--dark-blue);
+}
+
+/***********************************************NAV**************************************************/
+nav {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+nav p {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-left: 35px;
+}
+
+nav img {
+    width: 120px;
+    height: 40px;
+}
+
+/**************************************************MAIN*************************************************/
+main {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+}
+
+#text>input[type="text"] {
+    width: 395px;
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: var(--darkslategrey);
+    font-size: 1rem;
+    padding-left: 15px;
+}
+
+#text>p {
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+#btns>p {
+    color: var(--white);
+    font-size: 0.625rem;
+    font-weight: 400;
+}
+
+.btn {
+    width: 190px;
+    height: 47px;
+    border-radius: 5px;
+    background-color: var(--gold);
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 400;
+    border: none;
+    margin-top: 35px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--darkslategrey);
+}
+
+#second__btn {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    margin-left: 10px;
+}
+
+#second__btn:hover {
+    background-color: var(--darkslategrey);
+}
+
+#not__found__message {
+    background-color: var(--white-color);
+}
+
+/***************************SECTION MENSSAGE********************************/
+#not__found__message p {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.menssage p {
+    color: var(--medium-gray-color);
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+/*****************************FOOTER******************************************/
+footer {
+    margin-top: 70px;
+}
+
+footer p {
+    text-align: center;
+    color: var(--white);
+    font-size: 0.75rem;
+}
+
+#autor {
+    font-size: 0.75rem;
+}
+
+#autor a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 700;
+}
+
+/***************************************RESPONSIVE DESIGN****************************************/
+@media screen and (max-width: 768px) {
+
+    #container {
+        width: 60%;
+    }
+
+    nav p {
+        font-size: 2rem;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    #container {
+        width: 65%;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        padding-right: 20px;
+    }
+
+    nav p {
+        font-size: 1.6rem;
+        margin-top: 15px;
+        margin-left: 15px;
+    }
+
+    #text>input[type="text"] {
+        width: 340px;
+        margin-left: 25px;
+    }
+
+
+}

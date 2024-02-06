@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador</title>
+    <link rel="shortcut icon" href="./assets/img/favicon-alura.ico" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://kit.fontawesome.com/301f2ae17b.js" crossorigin="anonymous" defer></script>
+</head>
+<body>
+<div id="container">
+    <header>
+        <nav>
+            <img src="./assets/img/Frame 6.png" alt="Logo Alura">
+        </nav>
+    </header>
+
+    <main>
+        <section id="text">
+            <p>Digite seu texto</p>
+            <div id="btns">
+                <p><i class="fa-solid fa-circle-exclamation"></i> Apenas letras minúsculas e sem acento.</p>
+                <button class="btn">Criptografar</button>
+                <button id="second__btn" class="btn">Descriptografar</button>
+            </div>
+        </section>
+        <section id="menssage">
+            <div id="not__found__message">
+                <img src="./assets/img/High quality products 1 1.svg" alt="Homem de joelhos com um lupa nas mãos olhando um diamante">
+                <p>Nenhuma mensagem encontrada</p>
+                <p class="menssage">Digite um texto que você deseja criptografar ou descriptografar</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Alura Challenge - Oracle Next Education </p>
+            <p>Desenvolvido por <a href="https://www.linkedin.com/in/rayane-souza-df/">Rayane Souza</a></p>
+    </footer>
+</div>
+</body>
+</html>
