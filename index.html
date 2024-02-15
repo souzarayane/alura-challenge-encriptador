@@ -7,6 +7,7 @@
     <title>Decodificador</title>
     <link rel="shortcut icon" href="./assets/img/favicon-alura.ico" />
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/script.js" defer></script>
     <script src="https://kit.fontawesome.com/301f2ae17b.js" crossorigin="anonymous" defer></script>
 </head>
 
@@ -21,18 +22,24 @@
 
         <main>
             <section id="text">
-                <input type="text" placeholder="Digite seu texto" />
+                <input id="msg" placeholder="Digite sua mensagem" required />
+                <p><i class="fa-solid fa-circle-exclamation"></i> Apenas letras minúsculas e sem acento.</p> 
                 <div id="btns">
-                    <p><i class="fa-solid fa-circle-exclamation"></i> Apenas letras minúsculas e sem acento.</p>
-                    <button class="btn">Criptografar</button>
-                    <button id="second__btn" class="btn">Descriptografar</button>
+                    <button onclick="encryptText()" class="btn">Criptografar</button>
+                    <button onclick="decryptText()" id="second__btn" class="btn">Descriptografar</button>
                 </div>
+            </section>
+
+            <section id="image-field"  class="encrypted-text">
+                <img src="./assets/img/pesquisar.png" alt="Desenho de um homem procurando algo com uma lupa na mão" id="imagem">
             </section>
         </main>
 
         <footer>
-            <p>Alura Challenge - Oracle Next Education </p>
-            <p id="autor">Desenvolvido por <a href="https://www.linkedin.com/in/rayane-souza-df/">Rayane Souza</a></p>
+            <div id="rodape">
+                <p>Alura Challenge - Oracle Next Education </p>
+                <p id="autor">Desenvolvido por <a href="https://www.linkedin.com/in/rayane-souza-df/">Rayane Souza</a></p>
+            </div>
         </footer>
     </div>
 </body>
