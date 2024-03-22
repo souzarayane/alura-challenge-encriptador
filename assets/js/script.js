@@ -6,40 +6,35 @@ function encryptText() {
     // Obtém o valor do texto digitado
     var text = textArea.value;
 
-    // Criptografa o texto
-    var encryptedText = encrypt(text);
+    // Verifica se a entrada é válida
+    if (verificarEntrada(text)) {
 
-    // Obtém o elemento de destino para exibir o texto criptografado
-    var textImage = document.getElementById('image-field');
-
-    // Define o texto criptografado como o conteúdo da div
-    textImage.innerText = encryptedText;
-
-    // Adiciona um botão "Copiar" dinamicamente
-    var copyButton = document.createElement('button');
-    copyButton.innerText = 'Copiar';
-    copyButton.classList.add('btn-copiar'); // Adiciona uma classe ao botão para estilização CSS
-    copyButton.onclick = function () {
-        copy(encryptedText); // Chama a função copy() passando o texto criptografado como argumento
-    };
-
-    // Adiciona o botão "Copiar" ao elemento de destino
-    textImage.appendChild(copyButton);
-
-    var mensagem = document.getElementById("msg").value;
-
-    if (verificarEntrada(mensagem)) {
         // Se a entrada for válida, prossegue com a criptografia
-        var encryptedText = encrypt(mensagem);
+        var encryptedText = encrypt(text);
 
-        // Resto do código para exibir o texto criptografado e o botão de copiar
+        // Obtém o elemento de destino para exibir o texto criptografado
+        var textImage = document.getElementById('image-field');
+
+        // Define o texto criptografado como o conteúdo da div
+        textImage.innerText = encryptedText;
+
+        // Adiciona um botão "Copiar" dinamicamente
+        var copyButton = document.createElement('button');
+        copyButton.innerText = 'Copiar';
+        copyButton.classList.add('btn-copiar'); // Adiciona uma classe ao botão para estilização CSS
+        copyButton.onclick = function () {
+            copy(encryptedText); // Chama a função copy() passando o texto criptografado como argumento
+        };
+
+        // Adiciona o botão "Copiar" ao elemento de destino
+        textImage.appendChild(copyButton);
+
     } else {
-        // Se a entrada não for válida, exibe uma mensagem de erro na página HTML
-        var errorMessage = document.getElementById("error-message");
-        errorMessage.innerText = "Por favor, digite apenas letras minúsculas sem acentos ou caracteres especiais.";
+        // Se a entrada não for válida, exibe uma mensagem de erro como alerta
+        alert("Por favor, digite apenas letras minúsculas sem acentos ou caracteres especiais.");
     }
-
 }
+
 
 // Função para descriptografar o texto do textarea e mostrar no lugar da imagem
 function decryptText() {
@@ -57,6 +52,11 @@ function decryptText() {
 
     // Define o texto descriptografado como o conteúdo da div
     textImage.innerText = decryptedText;
+}
+
+// Função para verificar se a entrada é válida (apenas letras minúsculas sem acentos)
+function verificarEntrada(texto) {
+    return /^[a-z]+$/.test(texto);
 }
 
 // Função para encriptografar
@@ -102,17 +102,5 @@ function copy(text) {
     document.body.removeChild(textarea);
 
     // Exibe uma mensagem de alerta
-    console.log("Texto copiado: ", text);
-}
-
-// Função que verifica se o texto contém letras minúsculas e não tem acentos/caracteres especiais
-function verificarEntrada(texto) {
-    // Expressão regular para verificar se o texto contém apenas letras minúsculas sem acentos ou caracteres especiais
-    const regex = /^[a-z]+$/;
-
-    if (regex.test(texto)) {
-        return true; // Retorna verdadeiro se o texto for válido
-    } else {
-        return false; // Retorna falso se o texto for inválido
-    }
+    alert("Texto copiado: " + text);
 }
